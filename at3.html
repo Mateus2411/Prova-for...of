@@ -1,0 +1,19 @@
+<script>
+  /*
+    Calculadora de Descontos
+    Você tem um array de preços de produtos que estão em um carrinho de compras: [50.00, 15.50, 120.00, 80].
+    Peça ao usuário um percentual de desconto que será aplicado nos preços que estão contidos na lista.
+    Usando for...of, calcule o preço total da compra, aplicando o desconto informado pelo usuário apenas nos produtos que custam mais de R$ 60,00.
+    Apresente para o usuário qual será o valor final da compra.
+    */
+
+  let vl = [50.0, 15.5, 120.0, 80];
+  let des = Number(prompt("Diga o desconto (APENAS NUMEROS)"));
+  let sm = 0;
+  for (let item of vl) {
+    if (item > 60) {
+      sm = sm + (item - item * (des / 100));
+    }
+  }
+  alert(`O total é: ${sm}R$`);
+</script>
