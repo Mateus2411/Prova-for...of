@@ -1,5 +1,5 @@
 <script>
-  	    /*
+  /*
       Filtrando Cidades da Lista
       Considere a seguinte lista de cidades: ["Recife", "Salvador", "Rio de Janeiro", "São Paulo", "Manaus"].
       Peça para o usuário para digitar uma letra.
@@ -7,10 +7,10 @@
       Ao final, exiba o novo array com as cidades que atenderam a condição estabelecida.
       */
   let cid = ["Recife", "Salvador", "Rio de Janeiro", "São Paulo", "Manaus"];
-  let lt = prompt("Informe uma letra").toUpperCase();
+  let lt = prompt("Informe uma letra").toUpperCase().charAt(0);
   let ncid = [];
-  for (let item of cid){
-  	if(item.charAt() === lt) ncid.push(item);
+  for (let item of cid) {
+    if (item.charAt() === lt) ncid.push(item);
   }
-  alert(ncid.join(", "))
+  alert(ncid.join(", "));
 </script>
