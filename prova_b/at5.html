@@ -7,10 +7,10 @@
       Ao final, exiba o novo array com as cidades que atenderam a condição estabelecida.
       */
   let cid = ["Recife", "Salvador", "Rio de Janeiro", "São Paulo", "Manaus"];
-  let lt = prompt("Informe uma letra").toUpperCase().charAt(0);
+  let lt = prompt("Informe uma letra").toUpperCase();
   let ncid = [];
   for (let item of cid) {
-    if (item.charAt() === lt) ncid.push(item);
+    if (item.charAt(0) === lt) ncid.push(item);
   }
   alert(ncid.join(", "));
 </script>
