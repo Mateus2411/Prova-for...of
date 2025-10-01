@@ -11,7 +11,11 @@
   let des = Number(prompt("Diga o desconto (APENAS NUMEROS)"));
   let sm = 0;
   for (let item of vl) {
-    if (item > 60) sm = sm + (item - item * (des / 100));
+    if (item > 60) {
+      sm += item - item * (des / 100);
+    }
+  } for(let item of vl){
+    if(item < 60) sm += item; 
   }
-  alert(`O total é: ${sm}R$`);
+  alert(`O total é: ${sm.toFixed(2)}R$`);
 </script>

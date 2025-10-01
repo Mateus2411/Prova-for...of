@@ -10,7 +10,8 @@
   let lt = prompt("Informe uma letra").toUpperCase();
   let ncid = [];
   for (let item of cid) {
-    if (item.charAt(0) === lt) ncid.push(item);
+    if (item.charAt(0).toUpperCase() === lt) ncid.push(item);
   }
-  alert(ncid.join(", "));
+  if(ncid.length === 0) alert(`Não há cidades com a letra ${lt}`);
+  else alert(ncid.join(", "));
 </script>
